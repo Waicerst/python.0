@@ -1,0 +1,21 @@
+<form action="/" method="POST" enctype="multipart/form-data">
+    <div style="border: cadetblue solid 2px; width: 300px; height: 155px; padding: 25px">
+        <h3 style="color: cadetblue;">Правила файла:</h3>
+        <ol>
+            <li>Первая колонка таблицы 'Год'</li>
+            <li>Третья колонка таблицы 'Название'</li>
+            <li>Пятая колонка таблицы 'Актер'</li>
+            <li>Сначала указывается фамилия актера потом через запятую имя'</li>
+        </ol>
+    </div>
+    <div style="margin-top: 30px">
+        <label for="file">File:</label>
+        <input type="file" id="file" name="file"><br />
+        <button style="margin-top: 10px; background-color: cadetblue; width: 100px; height: 30px ;color: aliceblue; border: none">Upload</button>
+        {% if chart != null%}
+            <div id="chart"> <embed type="image/svg+xml" src= {{ chart|safe }} /> </div>
+        {% endif %}
+
+
+    </div>
+</form>
