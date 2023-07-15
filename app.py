@@ -38,7 +38,7 @@ def upload():
                         <h2 style="color: brown">Выберите другой файл в прошлом нет нужных данных</h2> '''
 
             else:
-                chart = pygal.Bar()
+                chart = pygal.HorizontalBar()
                 for y in year_title:
                     data = y.strip().split(',')
                     chart.add(data[1], int(data[0]))
